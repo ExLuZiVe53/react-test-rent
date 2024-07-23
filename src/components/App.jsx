@@ -1,10 +1,14 @@
 import cars from "../cars.json";
+import { FaRegHeart } from "react-icons/fa";
+import { IconContext } from "react-icons";
+
 export default function App() {
   // const cardAddressCountry = cars[0].address.split(",")[2];
 
   // const cardFunctionalities = cars[0].functionalities[0].split(",")[0];
 
   const arrCars = Array.from(cars);
+  const handleClick = () => {};
   // const cardAddressCity = cars.address.split(",")[1];
   return (
     <ul
@@ -14,7 +18,7 @@ export default function App() {
         padding: "12px 16px",
         borderRadius: 4,
         // backgroundColor: "gray",
-        color: "green",
+        color: "#002c80",
         listStyle: "none",
         display: "grid",
         flexDirection: "column",
@@ -35,9 +39,28 @@ export default function App() {
               }}
               key={`${item.id}_${item.make}`}
             >
-              <img className="cardImg" src={item.img} alt="car" width="100%" />
+              <img
+                className="cardImg"
+                src={item.img}
+                alt="car"
+                width="400"
+                style={{ objectFit: "cover" }}
+              />
+
+              <IconContext.Provider
+                value={{ color: "blue", className: "global-icons" }}
+              >
+                <button className="btn-heart">
+                  <FaRegHeart
+                    className="icon"
+                    size={30}
+                    onClick={handleClick}
+                  />
+                </button>
+              </IconContext.Provider>
               <h2 className="cardMake">
-                {item.make}&nbsp;<span>{item.model},</span>&nbsp;
+                {item.make}&nbsp;
+                <span style={{ color: "green" }}>{item.model},</span>&nbsp;
                 {item.year}
               </h2>
               <span className="cardRentalPrice">{item.rentalPrice}</span>
