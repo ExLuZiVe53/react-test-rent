@@ -1,6 +1,5 @@
 import cars from "../cars.json";
 import { FaRegHeart } from "react-icons/fa";
-import { IconContext } from "react-icons";
 
 export default function App() {
   // const cardAddressCountry = cars[0].address.split(",")[2];
@@ -47,17 +46,10 @@ export default function App() {
                 style={{ objectFit: "cover" }}
               />
 
-              <IconContext.Provider
-                value={{ color: "blue", className: "global-icons" }}
-              >
-                <button className="btn-heart">
-                  <FaRegHeart
-                    className="icon"
-                    size={30}
-                    onClick={handleClick}
-                  />
-                </button>
-              </IconContext.Provider>
+              <button className="btn-heart">
+                <FaRegHeart className="icon" size={30} onClick={handleClick} />
+              </button>
+
               <h2 className="cardMake">
                 {item.make}&nbsp;
                 <span style={{ color: "green" }}>{item.model},</span>&nbsp;
