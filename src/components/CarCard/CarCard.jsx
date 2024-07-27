@@ -29,6 +29,8 @@ const CarCard = (items) => {
 
   // const handleClick = () => {};
   const cardAddressCity = items.address.split(",")[1];
+  const cardAccessories = items.accessories[0];
+
   return (
     <li className={css.cardContainer}>
       <img className={css.cardContainer__img} src={img} alt="car" width="400" />
@@ -46,11 +48,11 @@ const CarCard = (items) => {
       <p className="cardAddress1">{cardAddressCity}</p>
       <p className="cardAddress2">{cardAddressCountry}</p>
       <p className="cardRentalCompany">{rentalCompany}</p>
-      <p className="cardRentalCompany0">Premium</p>
+      <p className="cardAccessories">{cardAccessories}</p>
       <p className="cardType">{type}</p>
       <p className="cardMake">{make}</p>
       <p className="cardId">{id}</p>
-      <p className="cardAccessories">{cardFunctionalities}</p>
+      <p className="cardFunctionalities">{cardFunctionalities}</p>
       <button>Learn more</button>
     </li>
   );
