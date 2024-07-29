@@ -33,9 +33,14 @@ const CarCard = (items) => {
 
   return (
     <li className={css.cardContainer}>
-      <img className={css.cardContainer__img} src={img} alt="car" width="400" />
+      <img
+        className={css.cardContainer__img}
+        src={img}
+        alt="car"
+        height="268"
+      />
 
-      <button className="btn-heart">
+      <button className={css.btnHeart}>
         <FaRegHeart className="icon" size={30} />
       </button>
 

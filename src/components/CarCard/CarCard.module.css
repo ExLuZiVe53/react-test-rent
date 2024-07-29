@@ -3,9 +3,25 @@
   padding: 15px 18px;
   border: 1px solid black;
   border-radius: 10px;
+  max-width: 274px;
   width: auto;
+
+  position: relative;
 }
 
 .cardContainer__img {
   object-fit: cover;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.btnHeart {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
