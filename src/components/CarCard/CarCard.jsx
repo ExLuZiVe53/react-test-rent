@@ -44,12 +44,14 @@ const CarCard = (items) => {
         <FaRegHeart className="icon" size={30} />
       </button>
 
-      <h2 className="cardMake">
-        {make}&nbsp;
-        <span style={{ color: "green" }}>{model},</span>&nbsp;
-        {year}
-      </h2>
-      <span className="cardRentalPrice">{rentalPrice}</span>
+      <div className={css.containerTitle}>
+        <h2 className="cardMake">
+          {make}&nbsp;
+          <span style={{ color: "green" }}>{model},</span>&nbsp;
+          {year}
+        </h2>
+        <span className={css.cardRentalPrice}>{rentalPrice}</span>
+      </div>
       <p className="cardAddress1">{cardAddressCity}</p>
       <p className="cardAddress2">{cardAddressCountry}</p>
       <p className="cardRentalCompany">{rentalCompany}</p>

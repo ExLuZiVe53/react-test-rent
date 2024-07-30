@@ -3,7 +3,6 @@
   padding: 15px 18px;
   border: 1px solid black;
   border-radius: 10px;
-  max-width: 274px;
   width: auto;
 
   position: relative;
@@ -11,8 +10,7 @@
 
 .cardContainer__img {
   object-fit: cover;
-  overflow: hidden;
-  border-radius: 14px;
+  width: 100%;
 }
 
 .btnHeart {
@@ -24,4 +22,13 @@
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.containerTitle {
+  display: flex;
+  align-items: center;
+}
+
+.cardRentalPrice {
+  margin-left: auto;
 }
