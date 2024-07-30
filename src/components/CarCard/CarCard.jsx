@@ -24,12 +24,13 @@ const CarCard = (items) => {
   } = items;
 
   const cardAddressCountry = items.address.split(",")[2];
-
   const cardFunctionalities = items.functionalities[0].split(",")[0];
-
-  // const handleClick = () => {};
   const cardAddressCity = items.address.split(",")[1];
   const cardAccessories = items.accessories[0];
+
+  const handleClick = () => {
+    console.log("click button");
+  };
 
   return (
     <li className={css.cardContainer}>
@@ -40,7 +41,7 @@ const CarCard = (items) => {
         height="268"
       />
 
-      <button className={css.btnHeart}>
+      <button className={css.btnHeart} onClick={handleClick}>
         <FaRegHeart className="icon" size={30} />
       </button>
 
