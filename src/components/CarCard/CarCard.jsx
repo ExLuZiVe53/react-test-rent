@@ -21,6 +21,7 @@ const CarCard = (items) => {
     // rentalConditions,
     // mileage,
     // toogleFavorite,
+    isFavorite,
   } = items;
 
   const cardAddressCountry = items.address.split(",")[2];
@@ -28,9 +29,16 @@ const CarCard = (items) => {
   const cardAddressCity = items.address.split(",")[1];
   const cardAccessories = items.accessories[0];
 
-  const handleClick = () => {
-    console.log("click button");
+  const handleClick = (event) => {
+    console.log(event.currentTarget);
+    event.currentTarget;
   };
+
+  const textClasses = [css.btnHeart];
+  if (isFavorite) {
+    textClasses.push(css.isFavorite);
+  }
+  // console.log(textClasses.join(" "));
 
   return (
     <li className={css.cardContainer}>

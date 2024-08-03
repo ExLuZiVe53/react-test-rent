@@ -1,7 +1,7 @@
 import CarCard from "../CarCard/CarCard";
 import css from "./CarList.module.css";
 
-const CarList = ({ items, FaRegHeart }) => {
+const CarList = ({ items, isFavorite }) => {
   const showCars = Array.isArray(items) && items.length;
   console.log(showCars);
   return (
@@ -27,7 +27,7 @@ const CarList = ({ items, FaRegHeart }) => {
               address={item.address}
               rentalConditions={item.rentalConditions}
               mileage={item.mileage}
-              iconFavorite={FaRegHeart}
+              isFavorite={isFavorite}
             />
           );
         })}
