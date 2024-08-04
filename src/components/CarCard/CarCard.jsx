@@ -1,4 +1,8 @@
-import { FaHeart } from "react-icons/fa6";
+import {
+  //  FaHeart,
+  FaRegHeart,
+} from "react-icons/fa6";
+
 import css from "./CarCard.module.css";
 
 const CarCard = (items) => {
@@ -39,6 +43,14 @@ const CarCard = (items) => {
     textClasses.push(css.isFavorite);
   }
   // console.log(textClasses.join(" "));
+  const ButtonLike = () => {
+    return (
+      <button type="checkbox" className={css.btnHeart} onClick={handleClick}>
+        {/* <FaHeart className="icon" size={30} /> */}
+        <FaRegHeart className="icon" size={30} />
+      </button>
+    );
+  };
 
   return (
     <li className={css.cardContainer}>
@@ -49,10 +61,7 @@ const CarCard = (items) => {
           alt="car"
           height="268"
         />
-
-        <button className={css.btnHeart} onClick={handleClick}>
-          <FaHeart className="icon" size={30} />
-        </button>
+        <ButtonLike />
       </div>
 
       <div className={css.containerTitle}>

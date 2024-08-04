@@ -28,7 +28,7 @@
   right: 1rem;
 
   background-color: transparent;
-  color: #3470ff;
+  color: white;
   border: none;
   cursor: pointer;
 }
@@ -39,9 +39,10 @@
 }
 
 .containerInfo {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
+  column-gap: 10px;
 }
 
 .cardRentalPrice {
