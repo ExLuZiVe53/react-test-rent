@@ -1,4 +1,4 @@
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa6";
 import css from "./CarCard.module.css";
 
 const CarCard = (items) => {
@@ -42,16 +42,18 @@ const CarCard = (items) => {
 
   return (
     <li className={css.cardContainer}>
-      <img
-        className={css.cardContainer__img}
-        src={img}
-        alt="car"
-        height="268"
-      />
+      <div className={css.imgContainer}>
+        <img
+          className={css.cardContainer__img}
+          src={img}
+          alt="car"
+          height="268"
+        />
 
-      <button className={css.btnHeart} onClick={handleClick}>
-        <FaRegHeart className="icon" size={30} />
-      </button>
+        <button className={css.btnHeart} onClick={handleClick}>
+          <FaHeart className="icon" size={30} />
+        </button>
+      </div>
 
       <div className={css.containerTitle}>
         <h2 className="cardMake">
