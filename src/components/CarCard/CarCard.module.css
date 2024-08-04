@@ -38,6 +38,12 @@
   align-items: center;
 }
 
+.containerInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .cardRentalPrice {
   margin-left: auto;
 }

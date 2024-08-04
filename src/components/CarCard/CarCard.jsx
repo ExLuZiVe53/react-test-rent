@@ -63,14 +63,16 @@ const CarCard = (items) => {
         </h2>
         <span className={css.cardRentalPrice}>{rentalPrice}</span>
       </div>
-      <p className="cardAddress1">{cardAddressCity}</p>
-      <p className="cardAddress2">{cardAddressCountry}</p>
-      <p className="cardRentalCompany">{rentalCompany}</p>
-      <p className="cardAccessories">{cardAccessories}</p>
-      <p className="cardType">{type}</p>
-      <p className="cardMake">{make}</p>
-      <p className="cardId">{id}</p>
-      <p className="cardFunctionalities">{cardFunctionalities}</p>
+      <div className={css.containerInfo}>
+        <p className="cardAddress1">{cardAddressCity}</p>
+        <p className="cardAddress2">{cardAddressCountry}</p>
+        <p className="cardRentalCompany">{rentalCompany}</p>
+        <p className="cardAccessories">{cardAccessories}</p>
+        <p className="cardType">{type}</p>
+        <p className="cardMake">{make}</p>
+        <p className="cardId">{id}</p>
+        <p className="cardFunctionalities">{cardFunctionalities}</p>
+      </div>
       <button>Learn more</button>
     </li>
   );
