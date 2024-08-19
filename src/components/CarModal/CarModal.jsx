@@ -1,5 +1,3 @@
-const CarModal = () => {
+export default function CarModal() {
   return <>CarModal</>;
-};
-
-export default CarModal;
+}

@@ -5,7 +5,7 @@ import {
 
 import css from "./CarCard.module.css";
 
-const CarCard = (items) => {
+export default function CarCard(items) {
   const {
     id,
     year,
@@ -85,6 +85,4 @@ const CarCard = (items) => {
       <button>Learn more</button>
     </li>
   );
-};
-
-export default CarCard;
+}

@@ -1,7 +1,7 @@
 import CarCard from "../CarCard/CarCard";
 import css from "./CarList.module.css";
 
-const CarList = ({ items, isFavorite }) => {
+export default function CarList({ items, isFavorite }) {
   const showCars = Array.isArray(items) && items.length;
 
   return (
@@ -33,6 +33,4 @@ const CarList = ({ items, isFavorite }) => {
         })}
     </ul>
   );
-};
-
-export default CarList;
+}
